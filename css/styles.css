@@ -1,0 +1,140 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+    font-family: 'Pontano Sans', sans-serif;
+}
+
+ul {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+li {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	padding-right: 10px;
+	display: inline;
+	font-size: 14px;
+	width: 100%;
+}
+
+#wrapper {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+#map-canvas {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	z-index: 1;
+}
+
+#rest-container {
+	margin: 0px;
+	padding: 0px;
+	height: 70%;
+	width: 20%;
+	margin: 1%;
+	border: 1px solid;
+	border-radius: 25px;
+	background-color: #B6B6BF;
+	opacity: 0.9;
+}
+
+#rest-search {
+	margin: 0px;
+	padding: 0px;
+	width: 500px;
+	position: relative;
+	top: 70px;
+	left: 100px;
+	z-index: 2;
+}
+
+
+#rest-searchbox {
+	border: 1px solid transparent;
+	border-radius: 2px 0 0 2px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	height: 32px;
+	outline: none;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#rest-header {
+	width: 100%;
+	height: 7%;
+	text-align: center;
+	margin-top: 10px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#rest-list {
+	overflow: auto;
+	height: 85%;
+}
+
+#rest-phone {
+	font-size: 12px;
+	display: inline;
+}
+
+#rest-message {
+	width: 100%;
+	position: absolute;
+	top: 60px;
+	font-size: 18px;
+	text-align: center;
+}
+
+#clickSpan {
+	cursor: pointer;
+	width: 100%;
+}
+
+#refresh-list {
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+}
+
+@media only screen and (max-device-width: 480px) {
+	#rest-container {
+		height: 30%;
+		width: 60%;
+	}
+
+	#rest-header {
+		font-size: 12px;
+		height: 10%;
+
+	}
+
+	#rest-phone {
+		font-size: 10px;
+	}
+
+	#rest-list {
+		height: 70%;
+	}
+
+	li {
+		font-size: 10px;
+	}
+
+}
+

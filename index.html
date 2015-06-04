@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Project 5 - Neighborhood Map (Hoover, AL)</title>
+	<link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>    
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>	
+	<script src="js/lib/knockout-3.3.0.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
+	<script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>	
+	<script type="text/javascript" src="js/load_restaurants.js"></script>
+	<script src="js/app.js"></script>
+
+</head>
+<body>
+
+	<div id="wrapper">
+		<div id="map-canvas"></div>
+		<div id="rest-search"></div>
+		<input id="rest-searchbox" type="text" placeholder="Insert City" size="50">
+		<div id="rest-container">	
+			<div id="rest-header">Restaurant List</div>
+			<div id="rest-list">
+				<div id="rest-message" data-bind="text: statusMessage"></div>
+				<ul data-bind="foreach: yelpData">
+					<div data-bind="visible: shouldShowRest">
+						<hr>
+						<span id="clickSpan" data-bind="click: $parent.clickIcon">
+							<li data-bind="text: yData.name"></li>
+							<img src="" data-bind="attr: {src: yData.rating_img_url_small}">
+							<br>
+							<div id="rest-phone" data-bind="text: yData.display_phone"></div>
+						</span>
+					</div>
+				</ul>
+				<ul id="refresh-list">
+					<div data-bind="visible: filteredList">
+						<hr>
+						<li data-bind="click: filterList(false)">Refresh List</li>
+					</div>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
